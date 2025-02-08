@@ -37,7 +37,7 @@ body {
     margin-top: 10px;
 }
 
-.number {
+.number, .point {
     background-color: #8c0d18;
     color: black;
     border: 1px solid #444444;
@@ -55,4 +55,4 @@ body {
     font-size: 2.2em;
     font-weight: 700;
     cursor: pointer;
-}
+} 
