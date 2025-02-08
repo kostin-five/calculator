@@ -31,8 +31,7 @@ body {
     border: none;
     border-radius: 5px;
     text-align: right;
-    font-size: 36px;
-
+    font-size: 2.5em;
     background-color: #444;
 }
 
@@ -87,4 +86,16 @@ body {
 
 .function:active {
     opacity: 0.4;
+}
+
+@media (max-width: 600px) {
+    .calculator {
+        width: 90%;
+    }
+    .function, .number, .point {
+        font-size: 2em;
+    }
+    .output {
+        font-size: 2.3em;
+    }
 }
