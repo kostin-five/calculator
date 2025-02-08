@@ -47,6 +47,18 @@ body {
     cursor: pointer;
 }
 
+.number:hover, .point:hover {
+    opacity: 0.6;
+}
+
+.number:focus-visible, .point:focus-visible {
+    outline: 2px solid #cccccc;
+}
+
+.number:active, .point:active {
+    opacity: 0.4;
+}
+
 .function {
     background-color: black;
     color: #8c0d18;
@@ -56,3 +68,15 @@ body {
     font-weight: 700;
     cursor: pointer;
 } 
+
+.function:hover {
+    opacity: 0.6;
+}
+
+.function:focus-visible {
+    outline: 2px solid #8c0d18;
+}
+
+.function:active {
+    opacity: 0.4;
+}
