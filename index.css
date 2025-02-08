@@ -17,8 +17,7 @@ body {
 
 .calculator {
     width: 40%;
-    height: 70%;
-    margin: auto auto;
+    margin: auto;
 }
 
 .output {
@@ -38,19 +37,22 @@ body {
     margin-top: 10px;
 }
 
-.button {
-    padding: 0.7em 0;
+.number {
     background-color: #8c0d18;
     color: black;
-    border: 1px solid #ffffff;
+    border: 1px solid #444444;
     border-radius: 5px;
     font-size: 2.2em;
     font-weight: 700;
-    line-height: 30px;
     cursor: pointer;
 }
 
 .function {
     background-color: black;
     color: #8c0d18;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    font-size: 2.2em;
+    font-weight: 700;
+    cursor: pointer;
 }
