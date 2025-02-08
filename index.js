@@ -1,9 +1,10 @@
-const display = document.getElementById('display');
+const display = document.querySelector('#display');
 const numbers = document.querySelectorAll('.number');
 const functions = document.querySelectorAll('.function');
-const clear = document.getElementById('clear');
-const equals = document.getElementById('equals');
+const clear = document.querySelector('#clear');
+const equals = document.querySelector('#equals');
 const point = document.querySelector('.point');
+const deleteBtn = document.querySelector('#delete');
 
 let currentInput = '';
 let operator = '';
@@ -57,6 +58,8 @@ functions.forEach(func => {
     func.addEventListener('click', () => {
         if (func.id === 'clear') {
             clearDisplay();
+        } else if (func.id === 'delete') {
+            deleteLast();
         } else if (func.id === 'equals') {
             calculateResult();
         } else {
@@ -73,6 +76,20 @@ function clearDisplay() {
     display.value = '';
     saveData();
 }
+
+function deleteLast() {
+    if (currentInput) {
+        currentInput = currentInput.slice(0, -1);
+        display.value = currentInput;
+    } else if (operator) {
+        operator = '';
+    } else if (previousInput) {
+        previousInput = previousInput.slice(0, -1);
+        display.value = previousInput;
+    }
+    saveData();
+}
+
 
 function applyOperator(op) {
     if (currentInput === '') return;
