@@ -10,7 +10,11 @@ numbers.forEach(number => {
 
 point.addEventListener('click', () => {
     if (!display.value.includes(point.innerText)) {
-        display.value += point.innerText;
+        if (display.value == "") {
+            display.value += "0."
+        } else {
+            display.value += point.innerText;
+        }
     } else {
         display.value += "";
     }
